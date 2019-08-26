@@ -146,8 +146,13 @@ const task = {
          .pipe(gulpIf(settings.compress, prettify({ indent_size: 3 })))
          .pipe(gulp.dest('build'));
       },
+    buildCNAME: () => {
+      return gulp.src('source/CNAME', { allowEmpty: true })
+         .pipe(gulp.dest('build'));
+      },
    build: () => {
       return mergeStream(
+         task.buildCNAME(),
          task.buildFonts(),
          task.buildImages(),
          task.buildJs(),
@@ -176,7 +181,7 @@ const task = {
       },
    publishToDocs: () => {
       // fs.mkdirSync('docs');
-      fs.writeFileSync('docs/CNAME', 'node-slate.js.org\n');
+      // fs.writeFileSync('docs/CNAME', 'node-slate.js.org\n');
       return gulp.src('build/**/*')
          .pipe(gulp.dest('docs'));
       }
