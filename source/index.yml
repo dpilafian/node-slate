@@ -17,3 +17,5 @@ includes:
 search: true
 
 highlight_theme: monokai
+
+base_url: /
