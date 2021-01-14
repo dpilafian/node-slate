@@ -553,7 +553,21 @@ const response = await axios.get(`/v1/network/${networkToken}/statements/company
 
 ```json
 {
-  ATENÇÃOOOOOOOOOOOOOOOOOOOOOO
+  "success": true,
+  "sum": [
+    [
+      {
+        "month": January,
+        "quantity": 157
+      }
+    ],
+    [
+      {
+        "month": December,
+        "quantity": 233
+      }
+    ]
+  ]
 }
 ```
 
@@ -575,7 +589,7 @@ None.
 
 ```javascript
 const networkToken = "9460246d-3c0e-4318-8874-5f7acca63efc";
-const type = "monthly";
+const type = "day";
 const brydgeSandboxURL = "https://balance.brydge.com.br";
 const api = axios. axios.create({
     baseURL: brydgeSandboxURL,
@@ -592,7 +606,11 @@ const response = await axios.get(`/v1/network/${networkToken}/statements/company
 
 ```json
 {
-  ATENÇÃOOOOOOO
+  "success": true,
+  "sum": {
+    "total": 25,
+    "quantity": 1
+  }
 }
 ```
 
