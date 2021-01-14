@@ -1,17 +1,22 @@
-title: API Reference
+title: Brydge - API Reference
 
 language_tabs:
-   - bash
-   - ruby
-   - python
    - javascript
 
 toc_footers:
-   - <a href=https://github.com/center-key/node-slate>node-slate on GitHub</a>
    - <a href=https://www.npmjs.com/package/node-slate>Documentation powered by Slate</a>
 
 includes:
    - main
+   - authentication
+   - portal
+   - environments
+   - customers
+   - sellers
+   - payments
+   - balance
+   - banks
+   - withdrawals
    - _errors
 
 search: true
