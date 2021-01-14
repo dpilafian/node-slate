@@ -137,7 +137,7 @@ const response = await axios.get(
 ```json
 {
   "success": true,
-  "WithdrawalsAll": [
+  "WithdrawalsList": [
     {
       "token": "f16410e7-8080-41f1-a3ee-dbb66c3dbefc",
       "status": "pending",
