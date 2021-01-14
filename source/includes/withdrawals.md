@@ -166,7 +166,7 @@ None.
 
 ### Get all Banks Transfers
 
-These endpoints get all bank transfer requests made by a seller.
+These endpoints get all bank transfer requests made by a Seller.
 
 ```javascript
 const networkToken = "9460246d-3c0e-4318-8874-5f7acca63efc";
