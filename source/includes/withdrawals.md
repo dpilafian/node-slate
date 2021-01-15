@@ -77,7 +77,7 @@ const api = axios. axios.create({
 });
 
 const response = await axios.get(
-    `/v1/network/${networkToken}/withdrawal/${tokenWithdrawal}`, {
+    `/v1/network/${networkToken}/bank-account/withdrawal/${tokenWithdrawal}`, {
     headers: {
       api_key: <API_KEY_FROM_YOUR_COMPANY>
    }
@@ -93,6 +93,9 @@ const response = await axios.get(
     "token": "58e80bde-91f6-4441-a41f-7269a8b1ec09",
     "status": "succeeded",
     "amount": 25,
+    "BankAccount": {
+      "token": "df23c22d-8147-488c-b511-e67bf15e5655"
+    },
     "updatedAt": "2020-11-26T15:41:48.966Z",
     "createdAt": "2020-11-26T15:41:48.966Z"
   }
@@ -102,10 +105,10 @@ const response = await axios.get(
 #### HTTP Request
 
 **Sandbox**
-`GET https://cashout.brydge.com.br/v1/network/:networkToken/withdrawal/:tokenWithdrawal`
+`GET https://cashout.brydge.com.br/v1/network/:networkToken/bank-account/withdrawal/:tokenWithdrawal`
 
 **Production**
-`GET https://cashout.brydge.io/v1/network/:networkToken/withdrawal/:tokenWithdrawal`
+`GET https://cashout.brydge.io/v1/network/:networkToken/bank-account/withdrawal/:tokenWithdrawal`
 
 #### Query Parameters
 
@@ -125,7 +128,7 @@ const api = axios. axios.create({
 });
 
 const response = await axios.get(
-    `/v1/network/${networkToken}/company-network/withdrawals`, {
+    `/v1/network/${networkToken}/company-network/bank-account/withdrawals`, {
     headers: {
       api_key: <API_KEY_FROM_YOUR_COMPANY>
    }
@@ -137,11 +140,14 @@ const response = await axios.get(
 ```json
 {
   "success": true,
-  "WithdrawalsList": [
+  "withdrawals": [
     {
       "token": "f16410e7-8080-41f1-a3ee-dbb66c3dbefc",
       "status": "pending",
       "amount": 25,
+      "BankAccount": {
+        "token": "df23c22d-8147-488c-b511-e67bf15e5655"
+      },
       "created_at": "2021-01-13T20:05:38.000Z",
       "failed_at": null,
       "succeed_at": null
@@ -153,10 +159,10 @@ const response = await axios.get(
 #### HTTP Request
 
 **Sandbox**
-`GET https://cashout.brydge.com.br/v1/network/:networkToken/company-network/withdrawals`
+`GET https://cashout.brydge.com.br/v1/network/:networkToken/company-network/bank-account/withdrawals`
 
 **Production**
-`GET https://cashout.brydge.io/v1/network/:networkToken/company-network/withdrawals`
+`GET https://cashout.brydge.io/v1/network/:networkToken/company-network/bank-account/withdrawals`
 
 #### Query Parameters
 
@@ -177,7 +183,7 @@ const api = axios. axios.create({
 });
 
 const response = await axios.get(
-    `/v1/network/${networkToken}/seller/${sellerToken}/withdrawals`, {
+    `/v1/network/${networkToken}/seller/${sellerToken}/bank-account/withdrawals`, {
     headers: {
       api_key: <API_KEY_FROM_YOUR_COMPANY>
    }
@@ -189,11 +195,14 @@ const response = await axios.get(
 ```json
 {
   "success": true,
-  "WithdrawalsAll": [
+  "withdrawals": [
     {
       "token": "58e80bde-91f6-4441-a41f-7269a8b1ec09",
       "status": "pending",
       "amount": 25,
+      "BankAccount": {
+        "token": "df23c22d-8147-488c-b511-e67bf15e5655"
+      },
       "created_at": "2021-01-13T20:05:38.000Z",
       "failed_at": null,
       "succeed_at": null
@@ -205,10 +214,10 @@ const response = await axios.get(
 #### HTTP Request
 
 **Sandbox**
-`GET https://cashout.brydge.com.br/v1/network/:networkToken/seller/:sellerToken/withdrawals`
+`GET https://cashout.brydge.com.br/v1/network/:networkToken/seller/:sellerToken/bank-account/withdrawals`
 
 **Production**
-`GET https://cashout.brydge.io/v1/network/:networkToken/seller/:sellerToken/withdrawals`
+`GET https://cashout.brydge.io/v1/network/:networkToken/seller/:sellerToken/bank-account/withdrawals`
 
 #### Query Parameters
 
