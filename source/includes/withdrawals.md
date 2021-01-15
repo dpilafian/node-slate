@@ -30,12 +30,12 @@ const response = await axios.post(
 {
   "success": true,
   "withdrawal": {
-    "token": "58e80bde-91f6-4441-a41f-7269a8b1ec09",
-    "status": "pending",
-    "amount": 25,
     "BankAccount": {
       "token": "df23c22d-8147-488c-b511-e67bf15e5655"
     },
+    "token": "58e80bde-91f6-4441-a41f-7269a8b1ec09",
+    "status": "pending",
+    "amount": 25,
     "updatedAt": "2020-11-26T15:41:48.966Z",
     "createdAt": "2020-11-26T15:41:48.966Z"
   }
@@ -90,12 +90,12 @@ const response = await axios.get(
 {
   "success": true,
   "withdrawal": {
-    "token": "58e80bde-91f6-4441-a41f-7269a8b1ec09",
-    "status": "succeeded",
-    "amount": 25,
     "BankAccount": {
       "token": "df23c22d-8147-488c-b511-e67bf15e5655"
     },
+    "token": "58e80bde-91f6-4441-a41f-7269a8b1ec09",
+    "status": "succeeded",
+    "amount": 25,
     "updatedAt": "2020-11-26T15:41:48.966Z",
     "createdAt": "2020-11-26T15:41:48.966Z"
   }
@@ -142,15 +142,30 @@ const response = await axios.get(
   "success": true,
   "withdrawals": [
     {
-      "token": "f16410e7-8080-41f1-a3ee-dbb66c3dbefc",
-      "status": "pending",
-      "amount": 25,
-      "BankAccount": {
-        "token": "df23c22d-8147-488c-b511-e67bf15e5655"
-      },
-      "created_at": "2021-01-13T20:05:38.000Z",
-      "failed_at": null,
-      "succeed_at": null
+      "withdrawal": {
+        "BankAccount": {
+          "token": "2f83dec532534001be98acf8dfec91d8"
+        },
+        "token": "f16410e7-8080-41f1-a3ee-dbb66c3dbefc",
+        "status": "pending",
+        "amount": 0.01,
+        "created_at": "2021-01-13T20:05:38.000Z",
+        "updated_at": "2021-01-13T20:05:38.000Z",
+        "failed_at": null
+      }
+    },
+    {
+      "withdrawal": {
+        "BankAccount": {
+          "token": "267sdec532534001be98acf8dfec91d9"
+        },
+        "token": "62e77e05-a0aa-4082-86a3-e9404ab0ee5f",
+        "status": "pending",
+        "amount": 0.01,
+        "created_at": "2021-01-15T16:09:13.000Z",
+        "updated_at": "2021-01-15T16:09:13.000Z",
+        "failed_at": null
+      }
     }
   ]
 }
@@ -197,15 +212,30 @@ const response = await axios.get(
   "success": true,
   "withdrawals": [
     {
-      "token": "58e80bde-91f6-4441-a41f-7269a8b1ec09",
-      "status": "pending",
-      "amount": 25,
-      "BankAccount": {
-        "token": "df23c22d-8147-488c-b511-e67bf15e5655"
-      },
-      "created_at": "2021-01-13T20:05:38.000Z",
-      "failed_at": null,
-      "succeed_at": null
+      "withdrawal": {
+        "BankAccount": {
+          "token": "0e0ce748-d99f-44c2-be5d-df2ce331b8bc"
+        },
+        "token": "c961c8e9-0fdd-4e5c-9406-3e147ea7ed96",
+        "status": "pending",
+        "amount": 0.01,
+        "created_at": "2021-01-13T20:05:38.000Z",
+        "updated_at": "2021-01-13T20:05:38.000Z",
+        "failed_at": null
+      }
+    },
+    {
+      "withdrawal": {
+        "BankAccount": {
+          "token": "267sdec532534001be98acf8dfec91d9"
+        },
+        "token": "5c4a6889-f529-4128-999c-3122665f0293",
+        "status": "pending",
+        "amount": 0.01,
+        "created_at": "2021-01-15T16:09:13.000Z",
+        "updated_at": "2021-01-15T16:09:13.000Z",
+        "failed_at": null
+      }
     }
   ]
 }
