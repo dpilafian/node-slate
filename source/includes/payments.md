@@ -547,7 +547,8 @@ const response = await axios.post(
 		},
 		amount: 25,
 		currency: "BRL",
-		description: "Pagamento de ticket: { number: 123456 }"
+		description: "Pagamento de ticket: { number: 123456 }",
+        subscription: "Weekly"
  	},
 	Customer: {
 		token: "6e790424-9ccb-46d5-a438-da224048c895"
@@ -572,8 +573,9 @@ const response = await axios.post(
     "fees": 1,
     "installments": 1,
     "Subscription": {
-      "next_billing_date": "2020-12-03T15:41:48.966Z",
-      "type": "Weekly"
+      "token": "4820807c-d0ac-4176-ac08-dc8ea16c6e3f",
+      "description": "Weekly",
+      "next_billing_date": "2021-01-25"
     },
     "transaction_id": "4a9b7105acb64761b7167b085372451e",
     "transaction_status": "succeeded",
@@ -603,11 +605,11 @@ const response = await axios.post(
 
 You can create subscriptions. To do that, it's pretty easy! When we set a subscription, recurrently the client will be charged the same amount for the same service in the next period.
 
-The periods that we have are:
-
-- **Weekly**: Payment date + 7 days
-- **Monthly**: Payment date + 1 month
-- **Anually**: Payment date + 1 year
+| Subscription Periods | Description            |
+| -------------------- | ---------------------- |
+| Weekly               | Payment date + 7 days  |
+| Monthly              | Payment date + 1 month |
+| Anually              | Payment date + 1 year  |
 
 #### HTTP Request
 
